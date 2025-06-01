@@ -192,7 +192,7 @@ function goFight (){
 
 
 function attack() {
-  if (monsterHealth> 0) {
+  if (monsterHealth > 0 && health > 0) {
   text.innerText = "The " + monsters[fighting].name + " attacks.";
   text.innerText += " You attack it with your " + weapons[currentWeaponIndex].name + ".";
   health -= monsters[fighting].level;
@@ -204,8 +204,7 @@ function attack() {
   } else if (monsterHealth <= 0) {
     defeatMonster();
   }
-  }
-  
+  } 
 }
 
 function dodge() {
